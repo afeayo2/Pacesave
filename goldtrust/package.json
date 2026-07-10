@@ -1,0 +1,16 @@
+{
+  "name": "goldtrust",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GoldTrust — savings & micro-loan platform (client, staff, front desk, ICT and admin desks in one app).",
+  "scripts": {
+    "install-all": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n SERVER,CLIENT -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run build && npm start --prefix server",
+    "seed": "npm run seed --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
